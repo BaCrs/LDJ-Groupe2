@@ -1,0 +1,27 @@
+<div id="path">
+    <span class="code">launches > all</span>
+</div>
+<div id="list-wrapper">
+    <table id="table-launch">
+        <thead>
+            <tr>
+                <th>Flight number</th>
+                <th>Mission name</th>
+                <th>Launch year</th>
+                <th>External links</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let launch of launches">
+                <td><a routerLink="/launches/{{ launch.flight_number }}">{{ launch.flight_number }}</a></td>
+                <td><span class="launch-mission-name">{{ launch.mission_name }}</span></td>
+                <td>{{ launch.launch_year }}</td>
+                <td>
+                <a href="{{ launch.links.wikipedia }}" class="launch-link"><img src="../../assets/icons/wikipedia.svg" alt="wikipedia icon"></a>
+                <a href="{{ launch.links.video_link }}" class="launch-link"><img src="../../assets/icons/youtube.svg" alt="youtube icon"></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+  

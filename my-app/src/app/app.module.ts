@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CapsuleComponent } from './capsule/capsule.component';
 import { CapsuleDetailComponent } from './capsule-detail/capsule-detail.component';
+import { LaunchComponent } from './launch/launch.component';
+import { LaunchDetailComponent } from './launch-detail/launch-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CapsuleComponent,
-    CapsuleDetailComponent
+    CapsuleDetailComponent,
+    LaunchComponent,
+    LaunchDetailComponent
   ],
   imports: [
     BrowserModule,
