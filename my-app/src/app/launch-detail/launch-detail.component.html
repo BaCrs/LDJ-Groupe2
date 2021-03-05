@@ -1,0 +1,83 @@
+<div id="path">
+    <span class="code" *ngIf="launch">launch > {{ launch.flight_number }}</span>
+</div>
+<div id="details-wrapper">
+    <div id="details-content">
+        <div id="details-header">
+            <span id="details-title" *ngIf="launch">Details of launch {{ launch.flight_number }}</span>
+            <button (click)="goBack()"><img src="../../assets/icons/left-arrow.svg" alt="left arrow icon">Back</button>
+        </div>
+        <table *ngIf="launch">
+            <tbody>
+                <tr>
+                    <th>Flight number</th>
+                    <td>{{ launch.flight_number }}</td>
+                </tr>
+                <tr>
+                    <th>Mission name</th>
+                    <td>{{ launch.mission_name }}</td>
+                </tr>
+                <tr>
+                    <th>Mission ID</th>
+                    <td>{{ launch.mission_id }}</td>
+                </tr>
+                <tr>
+                    <th>Upcoming</th>
+                    <td>{{ launch.upcoming }}</td>
+                </tr>
+                <tr>
+                    <th>Launch year</th>
+                    <td>{{ launch.launch_year }}</td>
+                </tr>
+                <tr>
+                    <th>Launch date unix</th>
+                    <td>{{ launch.launch_date_unix }}</td>
+                </tr>
+                <tr>
+                    <th>Launch date UTC</th>
+                    <td>{{ launch.launch_date_utc }}</td>
+                </tr>
+                <tr>
+                    <th>Launch date local</th>
+                    <td>{{ launch.launch_date_local }}</td>
+                </tr>
+                <tr *ngIf="launch.isTentative">
+                    <th>Tentative maximum precision</th>
+                    <td>{{ launch.tentative_max_precision }}</td>
+                </tr>
+                <tr>
+                    <th>TBD</th>
+                    <td>{{ launch.tbd }}</td>
+                </tr>
+                <tr>
+                    <th>Launch window</th>
+                    <td>{{ launch.launch_window }}</td>
+                </tr>
+                <tr>
+                    <th>Rocket</th>
+                    <td>{{ launch.rocket.name }}</td>
+                </tr>
+                <tr>
+                    <th>Launch site</th>
+                    <td>{{ launch.launch_site.site_name }}</td>
+                </tr>
+                <tr>
+                    <th>Launch success</th>
+                    <td>{{ launch.launch_success }}</td>
+                </tr>
+                <tr *ngIf="!launch.launch_success">
+                    <th>Launch failure details</th>
+                    <td>{{ launch.launch_failure_details.reason }}</td>
+                </tr>
+                <tr>
+                    <th>Links</th>
+                    <td><a href="{{ launch.links.wikipedia }}">Wikipedia</a> and <a href="{{ launch.links.video_link }}">YouTube</a></td>
+                </tr>
+                <tr>
+                    <th>Details</th>
+                    <td>{{ launch.details }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

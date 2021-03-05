@@ -1,0 +1,59 @@
+<div id="path">
+    <span class="code" *ngIf="capsule">capsules > {{ capsule.capsule_serial }}</span>
+</div>
+<div id="details-wrapper">
+    <div id="details-content">
+        <div id="details-header">
+            <span id="details-title" *ngIf="capsule">Details of capsule {{ capsule.capsule_serial }}</span>
+            <button (click)="goBack()"><img src="../../assets/icons/left-arrow.svg" alt="left arrow icon">Back</button>
+        </div>
+        <table *ngIf="capsule">
+            <tbody>
+                <tr>
+                    <th>Serial</th>
+                    <td>{{ capsule.capsule_serial }}</td>
+                </tr>
+                <tr>
+                    <th>Identification</th>
+                    <td>{{ capsule.capsule_id }}</td>
+                </tr>
+                <tr>
+                    <th>Status</th>
+                    <td>{{ capsule.status }}</td>
+                </tr>
+                <tr>
+                    <th>Original launch</th>
+                    <td>{{ capsule.original_launch }}</td>
+                </tr>
+                <tr>
+                    <th>Original launch unix</th>
+                    <td>{{ capsule.original_launch_unix }}</td>
+                </tr>
+                <tr>
+                    <th>Missions</th>
+                    <td>
+                        <ul>
+                            <li *ngFor="let mission of capsule.missions">{{ mission.name }}: flight {{ mission.flight }}</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Landings</th>
+                    <td>{{ capsule.landings }}</td>
+                </tr>
+                <tr>
+                    <th>Type</th>
+                    <td>{{ capsule.type }}</td>
+                </tr>
+                <tr>
+                    <th>Details</th>
+                    <td>{{ capsule.details }}</td>
+                </tr>
+                <tr>
+                    <th>Reuse count</th>
+                    <td>{{ capsule.reuse_count }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
