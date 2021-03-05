@@ -1,0 +1,73 @@
+#path {
+    background-color: #ffffff;
+    height: 2vw;
+    padding: 2vw 4vw;
+    display: flex;
+    align-items: center;
+    font-family: "Source Code Pro";
+    font-size: 1.3vw;
+    font-weight: 400;
+    box-shadow: 0px 10px 20px -15px rgba(0,0,0,0.5);
+}
+
+#list-wrapper {
+    padding: 2.5vw;
+}
+
+#table-capsule {
+    width: 100%;
+    border-top: 2px solid #3adad0;
+    background-color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 1vw;
+    font-weight: 400;
+}
+
+table thead th {
+    text-align: left;
+    padding: 1.5vw 2vw;
+}
+
+table tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+table tbody td {
+    padding: 1vw 2vw;
+    text-align: left;
+}
+
+table tbody tr td:last-child span {
+    padding: 0.3vw 0.7vw;
+    border: 1px solid;
+    border-radius: 25px;
+}
+
+table tbody tr td a {
+    color: #284274;
+    border-bottom: 1px dotted #284274;
+}
+
+.capsule-id {
+    font-style: italic;
+}
+
+.capsule-status-active {
+    color: #0a7525;
+    border-color: #0a7525;
+}
+
+.capsule-status-retired {
+    color: #a78209;
+    border-color: #a78209;
+}
+
+.capsule-status-unknown {
+    color: #424242;
+    border-color: #424242;
+}
+
+.capsule-status-destroyed {
+    color: #a72e09;
+    border: #a72e09;
+}

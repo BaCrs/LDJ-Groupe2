@@ -1,0 +1,25 @@
+<div id="path">
+    <span class="code">capsules > all</span>
+</div>
+<div id="list-wrapper">
+    <table id="table-capsule">
+        <thead>
+            <tr>
+                <th>Serial</th>
+                <th>Identification</th>
+                <th>Launch date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let capsule of capsules">
+                <td><a routerLink="/capsules/{{ capsule.capsule_serial }}">{{ capsule.capsule_serial }}</a></td>
+                <td><span class="capsule-id">{{ capsule.capsule_id }}</span></td>
+                <td *ngIf="capsule.original_launch">{{ capsule.launch_day }}/{{ capsule.launch_month }}/{{ capsule.launch_year }} at {{ capsule.launch_hourmin }}</td>
+                <td *ngIf="!capsule.original_launch">Not launched yet</td>
+                <td><span class="capsule-status-{{ capsule.status }}">{{ capsule.status }}</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+  
