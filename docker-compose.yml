@@ -1,0 +1,11 @@
+version: '3.3' # Indicates that version 3.3 is used.
+services: # Defines services composing the application.
+  angular:
+    container_name: ldj-groupe2 # Defines the container's name.
+    build:
+      context: . # Indicates Dockerfile's path.
+    ports:
+      - '4200:4200' # Port mapping.
+    volumes:
+      - ./my-app:/app #Specifies the volumes to be created.
+      - /app/node_modules
